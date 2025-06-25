@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 
 interface Question {
@@ -66,7 +66,6 @@ const WavesQuizGame: React.FC<WavesQuizGameProps> = ({ onBackToMenu, showCloseIc
   const [currentWave, setCurrentWave] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [lives, setLives] = useState(3);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [showWaveComplete, setShowWaveComplete] = useState(false);
@@ -80,7 +79,6 @@ const WavesQuizGame: React.FC<WavesQuizGameProps> = ({ onBackToMenu, showCloseIc
     setCurrentWave(0);
     setQuestionIndex(0);
     setScore(0);
-    setLives(3);
     setFeedback(null);
     setSelected(null);
     setShowWaveComplete(false);
@@ -171,7 +169,6 @@ const WavesQuizGame: React.FC<WavesQuizGameProps> = ({ onBackToMenu, showCloseIc
       setScore(s => s + 1);
       setFeedback('correct');
     } else {
-      setLives(l => l - 1);
       setFeedback('incorrect');
     }
     setTimeout(() => {
@@ -200,7 +197,6 @@ const WavesQuizGame: React.FC<WavesQuizGameProps> = ({ onBackToMenu, showCloseIc
     setCurrentWave(0);
     setQuestionIndex(0);
     setScore(0);
-    setLives(3);
     setFeedback(null);
     setSelected(null);
     setShowWaveComplete(false);

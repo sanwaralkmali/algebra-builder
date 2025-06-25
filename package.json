@@ -1,8 +1,8 @@
 {
-  "name": "number-classification",
+  "name": "algebra-builder",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://sanwaralkmali.github.io/num-cls-game",
+  "homepage": "https://sanwaralkmali.github.io/algebra-builder",
   "type": "module",
   "scripts": {
     "dev": "vite",
